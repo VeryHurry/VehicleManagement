@@ -7,8 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "SQTabbarViewController.h"
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+#import <BMKLocationkit/BMKLocationComponent.h>
 
-@interface AppDelegate ()
+#define BDMap_APPKEY @"oKNaO6ZV4vU6U9g9xfSCRZ0rS7XSvPex"
+
+@interface AppDelegate ()<BMKLocationAuthDelegate,BMKGeneralDelegate>
+
+@property (nonatomic, strong) BMKMapManager *mapManager;
 
 @end
 
@@ -16,10 +23,61 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+  
+    // 初始化定位SDK
+    [[BMKLocationAuth sharedInstance] checkPermisionWithKey:BDMap_APPKEY authDelegate:self];
+    //要使用百度地图，请先启动BMKMapManager
+    _mapManager = [[BMKMapManager alloc] init];
+    
+    /**
+     百度地图SDK所有API均支持百度坐标（BD09）和国测局坐标（GCJ02），用此方法设置您使用的坐标类型.
+     默认是BD09（BMK_COORDTYPE_BD09LL）坐标.
+     如果需要使用GCJ02坐标，需要设置CoordinateType为：BMK_COORDTYPE_COMMON.
+     */
+    if ([BMKMapManager setCoordinateTypeUsedInBaiduMapSDK:BMK_COORDTYPE_BD09LL]) {
+        NSLog(@"经纬度类型设置成功");
+    } else {
+        NSLog(@"经纬度类型设置失败");
+    }
+    
+    //启动引擎并设置AK并设置delegate
+    BOOL result = [_mapManager start:BDMap_APPKEY generalDelegate:self];
+    if (!result) {
+        NSLog(@"启动引擎失败");
+    }
+    
+    SQTabbarViewController * vc = [[SQTabbarViewController alloc]init];
+    self.window.rootViewController = vc;
     return YES;
 }
 
+/**
+ 联网结果回调
+ 
+ @param iError 联网结果错误码信息，0代表联网成功
+ */
+- (void)onGetNetworkState:(int)iError {
+    if (0 == iError) {
+        NSLog(@"联网成功");
+    } else {
+        NSLog(@"联网失败：%d", iError);
+    }
+}
+
+/**
+ 鉴权结果回调
+ 
+ @param iError 鉴权结果错误码信息，0代表鉴权成功
+ */
+- (void)onGetPermissionState:(int)iError {
+    if (0 == iError) {
+        NSLog(@"授权成功");
+    } else {
+        NSLog(@"授权失败：%d", iError);
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
