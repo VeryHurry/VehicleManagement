@@ -74,7 +74,6 @@
     UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
     // 指定为拉伸模式，伸缩后重新赋值
     image1 = [image1 resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
-
     
     UIImageView *imageView1=[[UIImageView alloc]initWithFrame:CGRectMake(20,300,370,431)];
     

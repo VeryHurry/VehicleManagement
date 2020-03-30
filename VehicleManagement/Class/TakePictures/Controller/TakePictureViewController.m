@@ -81,8 +81,10 @@
         NSLog(@"%d : %@",i,objcName);
     }
     
-    [_noLbl setValue:kLightGray forKeyPath:@"_placeholderLabel.textColor"];
-    [_noLbl setValue:kFont_Medium(14) forKeyPath:@"_placeholderLabel.font"];
+    _noLbl.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入骑手编号" attributes:@{NSFontAttributeName:kFont_Medium(14),NSForegroundColorAttributeName:kLightGray}];
+    
+//    [_noLbl setValue:kLightGray forKeyPath:@"_placeholderLabel.textColor"];
+//    [_noLbl setValue:kFont_Medium(14) forKeyPath:@"_placeholderLabel.font"];
     
     _typeLbl.font = kFont_Medium(14);
     
