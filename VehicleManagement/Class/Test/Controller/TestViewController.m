@@ -36,7 +36,7 @@
 #pragma mark - Network
 - (void)getMessage
 {
-    NSDictionary *dic = @{@"mobile":@"15259203981"};
+    NSDictionary *dic = @{@"mobile":kMobile};
     [[XXNetWorkMangerBase sharedNetWorkManger] postWithUrl:api_examinationList andData:dic andSuccessBlock:^(id success) {
         if (!kIsEmptyObj(success)) {
             

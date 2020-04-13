@@ -151,7 +151,7 @@
     [dic setObject:self.addressLbl.text forKey:@"lawAddress"];
     //    [dic setObject:@"厦门市湖里区" forKey:@"lawAddress"];
     //    [dic setObject:@"垃圾垃圾垃圾" forKey:@"law"];
-    [dic setObject:@"15259203981" forKey:@"createPerson"];
+    [dic setObject:kMobile forKey:@"createPerson"];
 //    [dic setObject:[kUserDefaults objectForKey:@"mobile"] forKey:@"createPerson"];
     [dic setObject:@"1" forKey:@"channelType"];
     

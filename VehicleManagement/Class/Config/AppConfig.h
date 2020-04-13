@@ -87,18 +87,8 @@ static NSString * const txt_headUp = @"头像上传中";
 
 
 
+#define kMobile  [kUserDefaults objectForKey:@"mobile"]
 
-
-#define kSecret @"$2a$10$G5TwJyHGvuFzM7H9V6zAl.d6TalQZNQ8X.D3Rp31/IKP"
-#define kClientId @"clientapp"
-#define kToken      [NSString stringWithFormat:@"%@",[USER_DEFAULT objectForKey:@"access_token"]]
-
-#define kUid        [UserInfoManage sharedInstance].userModel.ID
-#define kPhone      [UserInfoManage sharedInstance].userModel.phone
-#define kCompanyId  [UserInfoManage sharedInstance].userModel.companyId
-#define kPassportId [UserInfoManage sharedInstance].userModel.passportId
-#define kHead      [UserInfoManage sharedInstance].userModel.headPortrait
-#define kUserLabel  [UserInfoManage sharedInstance].userModel.label
 
 #define kAPPId  @"1276460060"
 

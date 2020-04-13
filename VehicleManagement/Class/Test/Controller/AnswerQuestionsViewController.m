@@ -257,7 +257,7 @@
 //    [dic setObject:@"2,2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4" forKey:@"scoreNo"];
     [dic setObject:scoreNo forKey:@"scoreNo"];
     [dic setObject:_model.result.examinationNo forKey:@"examinationNo"];
-    [dic setObject:@"15259203981" forKey:@"mobile"];
+    [dic setObject:kMobile forKey:@"mobile"];
     
     return dic;
 }

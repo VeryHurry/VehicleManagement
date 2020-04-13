@@ -7,6 +7,7 @@
 //
 
 #import "MineViewController.h"
+#import "MyLawViewController.h"
 #import "UserInfoModel.h"
 #import "MineCell.h"
 
@@ -25,6 +26,12 @@
 
 @implementation MineViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self getUserInfo];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.nav.title = @"个人中心";
@@ -40,16 +47,16 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MineCell" bundle:nil] forCellReuseIdentifier:@"mine_cell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self getUserInfo];
+    
 }
 
 - (void)setUI
 {
-    [_head sd_setImageWithURL:kUrl(self.model.result.headImg) placeholderImage:kImage(@"")];
-    _name.text = _model.result.name;
-    _telNo.text = _model.result.telNo;
-    _integral.text = [NSString stringWithFormat:@"积分：%ld分",(long)_model.result.integral];
-    _parentName.text = _model.result.parentName;
+    [_head sd_setImageWithURL:kUrl(self.model.headImg) placeholderImage:kImage(@"")];
+    _name.text = _model.name;
+    _telNo.text = _model.telNo;
+    _integral.text = [NSString stringWithFormat:@"积分：%ld分",(long)_model.integral];
+    _parentName.text = _model.parentName;
 }
 
 - (void)leftBarBtnClicked
@@ -65,10 +72,10 @@
 #pragma mark - Network
 - (void)getUserInfo
 {
-    NSDictionary *dic = @{@"mobile":@"15259203981"};
+    NSDictionary *dic = @{@"mobile":kMobile};
     [[XXNetWorkMangerBase sharedNetWorkManger] postWithUrl:api_userInfo andData:dic andSuccessBlock:^(id success) {
         if (!kIsEmptyObj(success)) {
-            self.model = [UserInfoModel modelWithJSON:success];
+            self.model = [UserInfoModel modelWithJSON:success[@"result"]];
             [self setUI];
         }
     } andFailureBlock:^(id failure) {
@@ -105,7 +112,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 1:
+        {
+            MyLawViewController *vc = [MyLawViewController new];
+            [self xx_pushVC:vc];
+            break;
+        }
+            
+        default:
+            break;
+    }
 //    SQViolationsDetailViewController *vc = [SQViolationsDetailViewController new];
 //    vc.model = _dataArr[indexPath.row];
 //    [self.navigationController pushViewController:vc animated:YES];

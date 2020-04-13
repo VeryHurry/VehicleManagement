@@ -24,6 +24,7 @@
 #import "Masonry.h"
 #import <YYKit.h>
 #import "DES3Util.h"
+#import "UserInfoModel.h"
 
 #endif
 

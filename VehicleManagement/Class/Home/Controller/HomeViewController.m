@@ -22,27 +22,28 @@
 
 - (void)isJumpLoginVC
 {
-    if (kIsEmptyObj([kUserDefaults objectForKey:def_userModel])) {
-        [self presentViewController:[self xx_getSb:@"Login" identifier:@"login_sb"] animated:YES completion:^{
-            
-        }];
+    if (![kUserDefaults boolForKey:@"isLogin"]){
+       
+        LoginViewController *loginVC = (LoginViewController *)[self xx_getSb:@"Login" identifier:@"login_sb"];
+        loginVC.modalPresentationStyle = 0;
+        [self presentViewController:loginVC animated:YES completion:nil];
     }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //    [self isJumpLoginVC];
+    [self isJumpLoginVC];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self setUI];
-    [kWindow addSubview:self.maskView];
-    [GoTestView alertWithBlock:^{
-        self.tabBarController.selectedIndex = 1;
-        self.maskView.alpha = 0;
-    }];
+//    [kWindow addSubview:self.maskView];
+//    [GoTestView alertWithBlock:^{
+//        self.tabBarController.selectedIndex = 1;
+//        self.maskView.alpha = 0;
+//    }];
 }
 
 - (void)setUI

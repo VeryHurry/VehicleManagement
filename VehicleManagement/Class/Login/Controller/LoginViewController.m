@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setUI];
 }
 
 - (void)setUI
@@ -47,21 +47,21 @@
 - (void)userLogin
 {
 //    NSDictionary *dic = @{@"accountNo":_user_txt.text,@"password":_password_txt.text};
-    NSDictionary *dic = @{@"mobile":@"15259203981",@"password":@"123456"};
+    NSDictionary *dic = @{@"mobile":@"18350000022",@"password":@"123456"};//type=1
+//    NSDictionary *dic = @{@"mobile":@"13599518882",@"password":@"123456"};//type=3
     [[XXNetWorkMangerBase sharedNetWorkManger] postWithUrl:api_login andData:dic andSuccessBlock:^(id success) {
-//        UserModel *model = [UserModel modelWithJSON:success[@"rows"]];
-//        [kUserDefaults setObject:success[@"rows"] forKey:def_userModel];
-//        [kUserDefaults setObject:model.accountNo forKey:def_phone];
-//        [kUserDefaults setObject:model.ID forKey:def_id];
-//        if (self.remember_btn.selected) {
-//            [kUserDefaults setObject:self.password_txt.text forKey:def_password];
-//        }
-//        else
-//        {
-//            [kUserDefaults removeObjectForKey:def_password];
-//        }
-//        [kUserDefaults synchronize];
-//
+
+        if ([success[@"status"] integerValue] == 1) {
+            UserInfoModel *model = [UserInfoModel modelWithJSON:success[@"result"]];
+            [model saveModelWithPath:@"userinfo"];
+            [kUserDefaults setObject:model.mobile forKey:@"mobile"];
+            [kUserDefaults setBool:YES forKey:@"isLogin"];
+        }
+        else
+        {
+            [MBProgressHUD showError:success[@"msg"]];
+        }
+        
         [self dismissViewControllerAnimated:YES completion:nil];
         [MBProgressHUD showSuccess:txt_login toView:kWindow];
     } andFailureBlock:^(id failure) {
@@ -114,17 +114,6 @@
     
 }
 
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-//    if (textField == _user_txt) {
-//        _user_lbl.hidden = YES;
-//    }
-//    else if (textField == _password_txt)
-//    {
-//        _password_lbl.hidden = YES;
-//    }
-//}
-
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     if (textField == _user_txt) {
@@ -154,28 +143,6 @@
     return YES;
 }
 
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-//{
-//    if (textField == _user_txt) {
-//        if (textField.text.length != 0) {
-//            _user_lbl.hidden = YES;
-//        }
-//        else
-//        {
-//            _user_lbl.hidden = NO;
-//        }
-//    }
-//    if (textField == _password_txt) {
-//        if (textField.text.length != 0) {
-//            _password_lbl.hidden = YES;
-//        }
-//        else
-//        {
-//            _password_lbl.hidden = NO;
-//        }
-//    }
-//
-//    return YES;
-//}
 
 @end
+

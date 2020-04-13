@@ -41,6 +41,8 @@
 		041D935A23D3023700FE171B /* SelectedAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D935723D3023600FE171B /* SelectedAssetCell.xib */; };
 		0426289D23FD2205007681A4 /* SQMyTakePictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426289B23FD2205007681A4 /* SQMyTakePictureCell.m */; };
 		0426289E23FD2205007681A4 /* SQMyTakePictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0426289C23FD2205007681A4 /* SQMyTakePictureCell.xib */; };
+		0448F95D243EC80400416623 /* LawListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448F95C243EC80400416623 /* LawListModel.m */; };
+		0448F960243ECB5700416623 /* QKCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448F95F243ECB5700416623 /* QKCoding.m */; };
 		044FC69924037DF8008245C5 /* SQReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044FC69724037DF8008245C5 /* SQReviewViewController.m */; };
 		044FC69A24037DF8008245C5 /* SQReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FC69824037DF8008245C5 /* SQReviewViewController.xib */; };
 		0457862423AC7156002B7AD2 /* testListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0457862323AC7156002B7AD2 /* testListModel.m */; };
@@ -62,6 +64,9 @@
 		04A7255223D042C4001952A7 /* TakePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7255023D042C4001952A7 /* TakePictureViewController.xib */; };
 		04ABC1DB23D5493F002905C1 /* MyTakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ABC1DA23D5493F002905C1 /* MyTakePictureViewController.m */; };
 		04B54F9423CD724600EB2741 /* SQTestHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B54F9323CD724500EB2741 /* SQTestHeadViewController.m */; };
+		04B5C7B124347F3A00059BA6 /* MyLawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5C7B024347F3A00059BA6 /* MyLawViewController.m */; };
+		04B5C7B52434835600059BA6 /* MyLawCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5C7B32434835600059BA6 /* MyLawCell.m */; };
+		04B5C7B62434835600059BA6 /* MyLawCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B5C7B42434835600059BA6 /* MyLawCell.xib */; };
 		04C312AA23BD7EB800FDA319 /* AnswerSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C312A823BD7EB700FDA319 /* AnswerSheetView.m */; };
 		04C96E9923C415140071C840 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C96E9823C415140071C840 /* Mine.storyboard */; };
 		04CCB63E23D434460043C4CB /* CustomText.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB63D23D434460043C4CB /* CustomText.m */; };
@@ -217,6 +222,10 @@
 		0426289A23FD2205007681A4 /* SQMyTakePictureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQMyTakePictureCell.h; sourceTree = "<group>"; };
 		0426289B23FD2205007681A4 /* SQMyTakePictureCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQMyTakePictureCell.m; sourceTree = "<group>"; };
 		0426289C23FD2205007681A4 /* SQMyTakePictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SQMyTakePictureCell.xib; sourceTree = "<group>"; };
+		0448F95B243EC80400416623 /* LawListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LawListModel.h; sourceTree = "<group>"; };
+		0448F95C243EC80400416623 /* LawListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LawListModel.m; sourceTree = "<group>"; };
+		0448F95E243ECB5700416623 /* QKCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKCoding.h; sourceTree = "<group>"; };
+		0448F95F243ECB5700416623 /* QKCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKCoding.m; sourceTree = "<group>"; };
 		044FC69624037DF8008245C5 /* SQReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQReviewViewController.h; sourceTree = "<group>"; };
 		044FC69724037DF8008245C5 /* SQReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQReviewViewController.m; sourceTree = "<group>"; };
 		044FC69824037DF8008245C5 /* SQReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SQReviewViewController.xib; sourceTree = "<group>"; };
@@ -251,6 +260,11 @@
 		04ABC1D923D5493F002905C1 /* MyTakePictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTakePictureViewController.h; sourceTree = "<group>"; };
 		04ABC1DA23D5493F002905C1 /* MyTakePictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTakePictureViewController.m; sourceTree = "<group>"; };
 		04B54F9323CD724500EB2741 /* SQTestHeadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQTestHeadViewController.m; sourceTree = "<group>"; };
+		04B5C7AF24347F3A00059BA6 /* MyLawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLawViewController.h; sourceTree = "<group>"; };
+		04B5C7B024347F3A00059BA6 /* MyLawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLawViewController.m; sourceTree = "<group>"; };
+		04B5C7B22434835600059BA6 /* MyLawCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLawCell.h; sourceTree = "<group>"; };
+		04B5C7B32434835600059BA6 /* MyLawCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLawCell.m; sourceTree = "<group>"; };
+		04B5C7B42434835600059BA6 /* MyLawCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLawCell.xib; sourceTree = "<group>"; };
 		04C312A823BD7EB700FDA319 /* AnswerSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerSheetView.m; sourceTree = "<group>"; };
 		04C312A923BD7EB800FDA319 /* AnswerSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerSheetView.h; sourceTree = "<group>"; };
 		04C96E9823C415140071C840 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -696,6 +710,8 @@
 				04DBFD502406194100EAAB51 /* MineViewController.h */,
 				04DBFD512406194100EAAB51 /* MineViewController.m */,
 				04DBFD522406194100EAAB51 /* MineViewController.xib */,
+				04B5C7AF24347F3A00059BA6 /* MyLawViewController.h */,
+				04B5C7B024347F3A00059BA6 /* MyLawViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -705,6 +721,8 @@
 			children = (
 				04DBFD56240657D000EAAB51 /* UserInfoModel.h */,
 				04DBFD55240657CF00EAAB51 /* UserInfoModel.m */,
+				0448F95B243EC80400416623 /* LawListModel.h */,
+				0448F95C243EC80400416623 /* LawListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -716,6 +734,9 @@
 				049239C724075BAE004DB80B /* MineCell.h */,
 				049239C824075BAE004DB80B /* MineCell.m */,
 				049239C924075BAE004DB80B /* MineCell.xib */,
+				04B5C7B22434835600059BA6 /* MyLawCell.h */,
+				04B5C7B32434835600059BA6 /* MyLawCell.m */,
+				04B5C7B42434835600059BA6 /* MyLawCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -822,6 +843,8 @@
 		04CF3F0A23A3280C00967DFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0448F95E243ECB5700416623 /* QKCoding.h */,
+				0448F95F243ECB5700416623 /* QKCoding.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1432,6 +1455,7 @@
 				04CF3F1823A3388B00967DFD /* README.md in Resources */,
 				04DBFD542406194100EAAB51 /* MineViewController.xib in Resources */,
 				040E6E8F23AB731000AF52EB /* AnswerQuestionsViewController.xib in Resources */,
+				04B5C7B62434835600059BA6 /* MyLawCell.xib in Resources */,
 				041A6CEB23D2E31000F031D8 /* XG_AlbumCell.xib in Resources */,
 				047EBDD523B0B4C80090C076 /* TestViewHead.xib in Resources */,
 				04A7255223D042C4001952A7 /* TakePictureViewController.xib in Resources */,
@@ -1501,6 +1525,7 @@
 				04CF3FD123A33A2400967DFD /* JYAddressPicker.m in Sources */,
 				04950B2A23FFB4E400215E23 /* SQViolationsDetailViewController.m in Sources */,
 				04CF3FE323A33A2400967DFD /* WMZDialogTool.m in Sources */,
+				04B5C7B52434835600059BA6 /* MyLawCell.m in Sources */,
 				041D935223D2F66200FE171B /* LawTypeListModel.m in Sources */,
 				04CF3FD223A33A2400967DFD /* CQMenuTabView.m in Sources */,
 				04CF3FDF23A33A2400967DFD /* WMZDialog+MenusSelect.m in Sources */,
@@ -1539,6 +1564,7 @@
 				04DB13FE2395EC4D00A5CF90 /* AppDelegate.m in Sources */,
 				04CF3FDC23A33A2400967DFD /* WMZDialog+PopView.m in Sources */,
 				04FA15F523C6FB7D00C629B8 /* ResultScoreView.m in Sources */,
+				0448F95D243EC80400416623 /* LawListModel.m in Sources */,
 				049239CA24075BAE004DB80B /* MineCell.m in Sources */,
 				04650C1223A724290086750A /* HomeViewController.m in Sources */,
 				0457862423AC7156002B7AD2 /* testListModel.m in Sources */,
@@ -1548,6 +1574,7 @@
 				04CCB64423D449B30043C4CB /* SQMapViewController.m in Sources */,
 				041A6CE223D2E31000F031D8 /* XG_AlbumCell.m in Sources */,
 				0457862D23AC7C09002B7AD2 /* TestViewHead.m in Sources */,
+				0448F960243ECB5700416623 /* QKCoding.m in Sources */,
 				04CF3FDD23A33A2400967DFD /* WMZDialog+Pay.m in Sources */,
 				04CF3FF623A33A7900967DFD /* XXNetWorkMangerBase.m in Sources */,
 				041A6CE323D2E31000F031D8 /* XG_RootViewController.m in Sources */,
@@ -1569,6 +1596,7 @@
 				04CF3FE823A33A2400967DFD /* WMZDialog+Select.m in Sources */,
 				040EA3AB23ACC04700155B38 /* AnswerOptionTableViewCell.m in Sources */,
 				04CF3FE223A33A2400967DFD /* WMZDialogShareView.m in Sources */,
+				04B5C7B124347F3A00059BA6 /* MyLawViewController.m in Sources */,
 				04CF3FE523A33A2400967DFD /* WMZDialog+BuyCar.m in Sources */,
 				04CF3F6523A3394F00967DFD /* NSTimer+addition.m in Sources */,
 				04DBFD57240657D000EAAB51 /* UserInfoModel.m in Sources */,

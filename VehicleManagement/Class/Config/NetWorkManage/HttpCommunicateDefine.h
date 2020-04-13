@@ -72,5 +72,6 @@ static NSString * const api_addLaw = @"/tocs-member-app/letu/gps/addLaw";//提�
 static NSString * const api_myLawList = @"/xm/breakTheLaw/convenientlyPhotoApp";//我的随手拍
 
 static NSString * const api_userInfo = @"/xm/userInfo";//骑手信息
+static NSString * const api_lawList = @"/xm/breakTheLaw/lawListApp";//违法记录查询
 
 #endif

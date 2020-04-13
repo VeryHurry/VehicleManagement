@@ -5,12 +5,6 @@
 #import "UserInfoModel.h"
 @implementation UserInfoModel
 
-
-@end
-
-@implementation UserModel
-
-
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper{
     return @{@"ID":@"id"};
 }

@@ -3,18 +3,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "QKCoding.h"
 
-@class UserModel;
-@interface UserInfoModel : NSObject
-
-@property (nonatomic, strong) UserModel *result;
-
-@property (nonatomic, copy) NSString *msg;
-
-@property (nonatomic, assign) NSInteger status;
-
-@end
-@interface UserModel : NSObject
+@interface UserInfoModel : QKCoding
 
 @property (nonatomic, copy) NSString *parentIds;
 
